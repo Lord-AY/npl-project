@@ -94,12 +94,14 @@ mongoose
 
     presentationFormat.train();
       app.get("/", async (req, res) => {
-          let query = req.query.q
-          let pres = presentationFormat.classify(query)
-          let level = classifier.classify(query)
-          console.log(pres)
+          const query = req.query.q
+          const pres = presentationFormat.classify(query)
+          const level = classifier.classify(query)
+          // console.log(pres)
           if (pres === 'count') {
               let count = await Logs.countDocuments({ logLevel: level })
+              console.log(level);
+              console.log(await Logs.find({logLevel:level}))
               return res.json({message: `There are ${count} ${level} messages`})
           } else {
               let count = await Logs.countDocuments({ logLevel: level })
