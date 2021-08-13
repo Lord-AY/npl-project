@@ -78,27 +78,27 @@ mongoose
         message: "HOW Many people",
         level: "count",
       },
-      {
-        message: "how many answers",
-        level: "count",
-      },
-      {
-        message: "How many questions",
-        level: "count",
-      },
-      {
-        message: "how Many people",
-        level: "count",
-      },
+      // {
+      //   message: "how many answers",
+      //   level: "count",
+      // },
+      // {
+      //   message: "How many questions",
+      //   level: "count",
+      // },
+      // {
+      //   message: "how Many people",
+      //   level: "count",
+      // },
 
-      {
-        message: "How MANY spoons",
-        level: "count",
-      },
-      {
-        message: "How Many toys",
-        level: "count",
-      },
+      // {
+      //   message: "How MANY spoons",
+      //   level: "count",
+      // },
+      // {
+      //   message: "How Many toys",
+      //   level: "count",
+      // },
       {
         message: "DESCRIPTION",
         level: "detail",
@@ -162,7 +162,7 @@ mongoose
         // console.log(level);
         // console.log(await Logs.find({logLevel:level}))
         return res.json({ message: `There are ${count} ${level} messages` });
-      } else {
+      } else if (pres === "detail") {
         let count = await Logs.countDocuments({ logLevel: level });
         let countApache = await Logs.countDocuments({
           logLevel: level,
@@ -170,6 +170,10 @@ mongoose
         });
         return res.json({
           message: `There are ${count} ${level} messages with ${countApache} belonging to Apache`,
+        });
+      } else {
+        return res.json({
+          message: `Please use different or more keywords in your query`,
         });
       }
     });
