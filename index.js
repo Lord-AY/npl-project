@@ -78,27 +78,27 @@ mongoose
         message: "HOW Many people",
         level: "count",
       },
-      // {
-      //   message: "how many answers",
-      //   level: "count",
-      // },
-      // {
-      //   message: "How many questions",
-      //   level: "count",
-      // },
-      // {
-      //   message: "how Many people",
-      //   level: "count",
-      // },
+      {
+        message: "how many answers",
+        level: "count",
+      },
+      {
+        message: "How many questions",
+        level: "count",
+      },
+      {
+        message: "how Many people",
+        level: "count",
+      },
 
-      // {
-      //   message: "How MANY spoons",
-      //   level: "count",
-      // },
-      // {
-      //   message: "How Many toys",
-      //   level: "count",
-      // },
+      {
+        message: "How MANY spoons",
+        level: "count",
+      },
+      {
+        message: "How Many toys",
+        level: "count",
+      },
       {
         message: "DESCRIPTION",
         level: "detail",
@@ -124,19 +124,19 @@ mongoose
         level: "detail",
       },
       {
-        message: "description",
+        message: "description of my house",
         level: "detail",
       },
       {
-        message: "description",
+        message: "description of food",
         level: "detail",
       },
       {
-        message: "Detail",
+        message: "Detail of food",
         level: "detail",
       },
       {
-        message: "details",
+        message: "details of the car",
         level: "detail",
       },
     ];
